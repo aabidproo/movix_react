@@ -67,7 +67,7 @@ const Carousel = ({ data, loading }) => {
                             return (
                                 <div
                                     key={item.id}
-                                    className="carouselItem">
+                                    className="carouselItem" onClick={() => navigate(`/${item.media_type}/${item.id}`)}>
                                     <div className="posterBlock">
                                         <Img src={posterUrl} alt="" />
                                         <CircleRating rating={item.vote_average.toFixed(1)} />

@@ -40,6 +40,7 @@ function App() {
       });
   };
 
+  // Calling Saperate Genres Api to single Endpoint
   const genresCall = async () => {
     let promises = []
     let endPoints = ["tv", "movie"]
@@ -50,7 +51,6 @@ function App() {
     })
 
     const data = await Promise.all(promises)
-    console.log(data)
     data.map(({ genres }) => {
       return genres.map((item) => (allGenres[item.id] = item))
     })
