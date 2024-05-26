@@ -1,0 +1,15 @@
+.genres {
+    display: flex;
+    gap: 4px;
+    .genre {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: rgb(189, 189, 189);
+        padding: 4px 6px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+}
