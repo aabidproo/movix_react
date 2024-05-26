@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
 
 import useFetch from '../../../hooks/useFetch';
-import './herobanner.scss';
+import './style.scss';
 import Img from '../../../components/lazyLoadImage/Img';
 import ContentWrapper from '../../../components/componentWrapper/ContentWrapper';
 
@@ -43,7 +43,7 @@ const HeroBanner = () => {
         <div className="heroBanner_Content">
           <span className="title">Welcome.</span>
           <span className="subTitle">Millions of Movies, TV Shows and people to discover.Explore Now</span>
-          <div className="serachInput">
+          <div className="searchInput">
             <input
               type="text"
               placeholder='Search for a movies or tv shows...'
