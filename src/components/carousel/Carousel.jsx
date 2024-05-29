@@ -17,7 +17,7 @@ import Genres from "../genres/Genres";
 
 
 
-const Carousel = ({ data, loading }) => {
+const Carousel = ({ data, loading, endpoint, title }) => {
 
     const carouselContainer = useRef();
 
@@ -52,6 +52,7 @@ const Carousel = ({ data, loading }) => {
     return (
         <div className="carousel">
             <ContentWrapper>
+                {title && <div className="carouselTitle"> {title} </div> }
                 <BsFillArrowLeftCircleFill
                     className="carouselLeftNav arrow"
                     onClick={() => navigation("left")} />
@@ -67,7 +68,7 @@ const Carousel = ({ data, loading }) => {
                             return (
                                 <div
                                     key={item.id}
-                                    className="carouselItem" onClick={() => navigate(`/${item.media_type }/${item.id}`)}>
+                                    className="carouselItem" onClick={() => navigate(`/${item.media_type || endpoint}/${item.id}`)}>
                                     <div className="posterBlock">
                                         <Img src={posterUrl} alt="" />
                                         <CircleRating rating={item.vote_average.toFixed(1)} />

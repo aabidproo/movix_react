@@ -8,6 +8,7 @@ import { VscChromeClose } from "react-icons/vsc";
 import './style.scss'
 import ContentWrapper from "../componentWrapper/ContentWrapper";
 import logo from '../../assets/movix-logo.svg';
+import home from "../../pages/home/Home";
 
 const Header = () => {
   const [show, setShow] = useState("top");
@@ -69,7 +70,7 @@ const Header = () => {
   return (
     <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
-        <div className="logo">
+        <div className="logo" onClick={() => navigate('/')}>
           <img src={logo} alt="" />
         </div>
         <ul className="menuItems">

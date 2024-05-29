@@ -4,8 +4,10 @@ import { useParams } from 'react-router'
 import './details.scss'
 import useFetch from '../../hooks/useFetch'
 import DetailsBanner from './detailsBanner/DetailsBanner'
-import Trending from '../home/trending/Trending'
-import Popular from '../home/popular/Popular'
+import Cast from './cast/Cast'
+import VideosSection from './videoSection/VideoSection'
+import Similar from './carousel/Similar'
+import Recommendation from './carousel/Recommendation'
 
 
 
@@ -18,8 +20,10 @@ const Details = () => {
   return (
     <div>
       <DetailsBanner video={data?.results?.[0]} crew={credits?.crew}/>
-      <Trending/>
-      <Popular/>
+      <Cast data={credits?.cast} loading={creditsLoading}/>
+      <VideosSection data={data} loading={loading} />
+      <Similar mediaType={mediaType} id={id} />
+      <Recommendation mediaType={mediaType} id={id}/>
     </div>
   )
 }
