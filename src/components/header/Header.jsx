@@ -74,8 +74,8 @@ const Header = () => {
           <img src={logo} alt="" />
         </div>
         <ul className="menuItems">
-          <li className="menuItem">Movies</li>
-          <li className="menuItem">TV Shows</li>
+          <li className="menuItem" onClick={() => navigate(`/explore/${mediaType}`)} >Movies</li>
+          <li className="menuItem" onClick={() => navigate(`/explore/${mediaType}`)}>TV Shows</li>
           <li className="menuItem">
             <HiOutlineSearch onClick={openSearch} />
           </li>
